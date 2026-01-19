@@ -3,25 +3,78 @@
 		<title>welcome to da fish fry</title>
 
 		<style>
+			body {
+				background-color:black;
+				color:white;
+			}
+			.centerfy {
+				top:50%;
+				width:auto;
+				position:absolute;
+				transform:translateY(-50%);
+			}
+
 			#gallery-main {
-				background-color: red;
+				display:flex;
 
 				* {
-					width: 128px;
-					background-color:green;
+					width:128px;
+					height:128px;
 				}
 			}
 
 			#door {
 				background-image: url("img/gallery_door1.webp");
+				background-repeat:no-repeat;
+			}	#door:hover {
+				background-image:url("img/gallery_door2.webp") !important;
+			}
+
+			.square {
+				text-align: center;
+				display:block;
+				margin-left:500px;
+				margin-right:500px;
+			}
+
+			#nav {
+				position:fixed;
+				left:3em;
+
+				a {
+					color:#0044ff;
+					font-weight: bold;
+				}
+
+				a:visited {
+					color:magenta;
+				}
 			}
 		</style>
 	</head>
 	<body>
-		<div id="gallery-main">
-			<div class="square"><img src="img/gallery_microbe.webp"></div>
-			<div class="square", id="door"><a href="unknown">fddfsdfasdfa</a></div>
-			<div class="square" class="square"><img src="img/gallery_quare1.png"></div>
+		<div id="nav">
+			<h1>squares gallery</h1>
+			<a href="index.html">return</a>
+		</div>
+
+		<div class="centerfy">
+			<div id="gallery-main">
+				<div class="square">
+					<img src="img/gallery_microbe.webp">
+					<p>"microbe"</p>
+				</div>
+
+				<div class="square" class="square">
+					<img src="img/gallery_quare1.png">
+					<p>"i don't know, i'm scared!"</p>
+				</div>
+
+				<div class="square", id="door">
+					<a href="ummmmmmm"><img src="img/gallery_door1.webp" style="opacity:0;"></a>
+					<p>"door"</p>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
